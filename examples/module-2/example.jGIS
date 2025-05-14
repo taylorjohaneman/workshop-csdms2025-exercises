@@ -1,8 +1,82 @@
 {
   "layerTree": [
-    "e220d708-c851-4f54-b9ae-9c56c5e04480"
+    "e220d708-c851-4f54-b9ae-9c56c5e04480",
+    "a9c8e348-eb44-4bea-9645-564a83902de8",
+    "d25f390d-3d28-49f8-884c-f49ca68418cc",
+    "8c82c167-e328-4050-bf39-a4c119a9ec58"
   ],
   "layers": {
+    "8c82c167-e328-4050-bf39-a4c119a9ec58": {
+      "name": "US Citites",
+      "parameters": {
+        "color": {
+          "stroke-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "get",
+              "ELEV_IN_FT"
+            ]
+          ]
+        },
+        "opacity": 1.0,
+        "source": "7abbc437-ab9d-49b4-9e28-3ca103f9b8df",
+        "symbologyState": {
+          "method": "color",
+          "renderType": "Graduated",
+          "value": "ELEV_IN_FT"
+        },
+        "type": "circle"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
+    "a9c8e348-eb44-4bea-9645-564a83902de8": {
+      "filters": {
+        "appliedFilters": [
+          {
+            "feature": null,
+            "operator": null,
+            "value": null
+          }
+        ],
+        "logicalOp": null
+      },
+      "name": "SEEC and NSIDC",
+      "parameters": {
+        "color": null,
+        "opacity": 1.0,
+        "source": "b06dfcf2-234d-4acc-a4ff-46cb049247b3",
+        "symbologyState": null,
+        "type": "line"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
+    "d25f390d-3d28-49f8-884c-f49ca68418cc": {
+      "filters": {
+        "appliedFilters": [
+          {
+            "feature": null,
+            "operator": null,
+            "value": null
+          }
+        ],
+        "logicalOp": null
+      },
+      "name": "Mod 1 Map",
+      "parameters": {
+        "color": null,
+        "opacity": 1.0,
+        "source": "87117e55-b5a7-4087-a53a-d5f8a24f7b9e",
+        "symbologyState": null,
+        "type": "line"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
     "e220d708-c851-4f54-b9ae-9c56c5e04480": {
       "name": "Basemap",
       "parameters": {
@@ -16,19 +90,91 @@
   "options": {
     "bearing": 0.0,
     "extent": [
-      -16943218.227214247,
-      1813884.940591243,
-      -5539788.477108987,
-      8661878.212775469
+      -14194406.148953307,
+      -207763.4019505391,
+      -8288573.4753204575,
+      8050895.970634635
     ],
-    "latitude": 42.51130981651042,
-    "longitude": -100.98414277727615,
+    "latitude": 33.19763577214654,
+    "longitude": -100.98402114516449,
     "pitch": 0.0,
     "projection": "EPSG:3857",
-    "zoom": 4.3991367692285905
+    "zoom": 3.7195927754588274
   },
   "schemaVersion": "0.5.0",
   "sources": {
+    "7abbc437-ab9d-49b4-9e28-3ca103f9b8df": {
+      "name": "Custom GeoJSON Layer Source",
+      "parameters": {
+        "path": "us_cities.geojson"
+      },
+      "type": "GeoJSONSource"
+    },
+    "87117e55-b5a7-4087-a53a-d5f8a24f7b9e": {
+      "name": "Mod 1 Map Source",
+      "parameters": {
+        "data": {
+          "bbox": null,
+          "features": [
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.24206599999948,
+                  40.01007767367196
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "4001 Discovery Dr., Boulder, CO",
+                "Name": "Sustainability, Energy, and Environment Community (SEEC) Building"
+              },
+              "type": "Feature"
+            },
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.25271574468819,
+                  40.01262175838934
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "National Snow and Ice Data Center CIRES, 449 UCB University of Colorado Boulder",
+                "Name": "National Snow and Ice Data Center (NSIDC)"
+              },
+              "type": "Feature"
+            },
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.24978187980736,
+                  39.983227671512694
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "669 S Broadway, Boulder, CO 80305",
+                "Name": "Sweet Cow Ice Cream"
+              },
+              "type": "Feature"
+            }
+          ],
+          "type": "FeatureCollection"
+        },
+        "path": null,
+        "valid": null
+      },
+      "type": "GeoJSONSource"
+    },
     "8c8bb2c9-59a5-4962-9835-bd4eada4a4ce": {
       "name": "Esri.WorldGrayCanvas",
       "parameters": {
@@ -42,6 +188,54 @@
         }
       },
       "type": "RasterSource"
+    },
+    "b06dfcf2-234d-4acc-a4ff-46cb049247b3": {
+      "name": "SEEC and NSIDC Source",
+      "parameters": {
+        "data": {
+          "bbox": null,
+          "features": [
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.24206599999948,
+                  40.01007767367196
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "4001 Discovery Dr., Boulder, CO",
+                "Name": "Sustainability, Energy, and Environment Community (SEEC) Building"
+              },
+              "type": "Feature"
+            },
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.25271574468819,
+                  40.01262175838934
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "National Snow and Ice Data Center CIRES, 449 UCB University of Colorado Boulder",
+                "Name": "National Snow and Ice Data Center (NSIDC)"
+              },
+              "type": "Feature"
+            }
+          ],
+          "type": "FeatureCollection"
+        },
+        "path": null,
+        "valid": null
+      },
+      "type": "GeoJSONSource"
     }
   }
 }
